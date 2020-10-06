@@ -1,0 +1,12 @@
+{
+  "name": "Wp monitor release",
+  "description": "my plugin description",
+  "require": {
+    "php": ">=7.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "Monitorwp\\": "./"
+    }
+  }
+}
