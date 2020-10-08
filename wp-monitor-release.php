@@ -20,6 +20,6 @@ if(!class_exists('Wp_monitor_release')){
     function db_monitor_dollar(){
        Db::db_register_init();
     }
+    
 }
-
 

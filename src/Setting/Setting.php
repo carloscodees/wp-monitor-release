@@ -81,6 +81,42 @@ class Setting {
      */
     const tableName = 'monitordollar';
 
+    /**
+     * page title
+     * @var string
+     */
+    const page_title = 'Monitor Dollar';
+
+    /**
+     * page capacitly
+     * @var string
+     */
+    const edit_others_posts = 'edit_others_posts';
+
+    /**
+     * money
+     * @var array
+     */
+    const currency = array(
+        "australia_dolar"               => "AUD",
+        "gran_bretana_libre_esterlina"  => "GBP",
+        "euro"                          => "EUR",
+        "japon_yen"                     => "JPY",
+        "suiza_franco"                  => "CHF",
+        "EE_UU_dolar"                   => "USD",
+        "afganistan_afgani"             => "AFN",
+        "albania_lek"                   => "ALL",
+        "algeria_dinar"                 => "DZD",
+        "angola_kwanza"                 => "AOA",
+        "algeria_dinar"                 => "ALL",
+        "algeria_dinar"                 => "DZD",
+        "angola_kwanza"                 => "AOA",
+        "argentina_peso"                => "ARS",
+        "armenia_dram"                  => "AMD",
+        "aruba_florin"                  => "AWG",
+        "australia_dolar"               => "ATS (EURO)"
+    );
+
 
 
 
