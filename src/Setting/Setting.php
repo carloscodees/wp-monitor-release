@@ -94,6 +94,12 @@ class Setting {
     const edit_others_posts = 'edit_others_posts';
 
     /**
+     * taxtonomi
+     * @var string
+     */
+    const textDomain = 'monitor-dollar-text';
+
+    /**
      * money
      * @var array
      */
@@ -127,5 +133,7 @@ class Setting {
 		$this->plugin_url = dirname( __FILE__ );
    
     }
-
+    public function get_plugin_url(){
+        return $this->plugin_url;
+    }
 }

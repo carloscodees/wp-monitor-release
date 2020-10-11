@@ -4,6 +4,7 @@
 namespace Monitorwp\src\Route;
 
 use Monitorwp\src\Setting\Setting;
+use WP_REST_Request;
 use WP_REST_Server;
 
 class Route {
@@ -19,26 +20,27 @@ class Route {
 
     public function registerRouter(){
 
-        register_rest_route(
-			Setting::namespace,
-			'login',
-			array(
+        register_rest_route(    Setting::namespace, '/login/', array(
+            array(
                 'methods'                 => WP_REST_Server::CREATABLE,
                 'permission_callback'     => array( $this, 'privileged_permission_callback' ),
 				        'callback'                => array( $this, 'login' ),
             ),
             array(
-                'methods'                 => WP_REST_Server::CREATABLE,
+                'methods'                 => WP_REST_Server::DELETABLE,
                 'permission_callback'     => array( $this, 'privileged_permission_callback' ),
                         'callback'                => array( $this, 'logout' )
-            )
+            ),
+        )
+			
             
         );
 
+        /**
+         * crud currenty
+         */
 
-        register_rest_route(
-            Setting::namespace,
-            'currenty',
+        register_rest_route(     Setting::namespace, '/currenty/',  array(
             array(
                 'methods'               => WP_REST_Server::READABLE,
                 'permission_callback'   => array($this, 'privileged_permission_callback'),
@@ -58,51 +60,76 @@ class Route {
                 'methods'               => WP_REST_Server::EDITABLE,
                 'permission_callback'   => array($this, 'privileged_permission_callback'),
                         'callback'              => array($this, 'update_currenty')
-            )
+            ),
+        )
+           
 
         );
 
-
+       
 
 
     }
 
 
     /**
-     * add category
+     * get currenty
      * @param WP_REST_Request $request
      * @return WP_Error|WP_REST_Response
      */
-    public function get_currenty( $Request ){
+    public function get_currenty(WP_REST_Request $Request ){
 
-
+        die('get');
     }
     /**
-     * add category
+     * delete currenty
      * @param WP_REST_Request $request
      * @return WP_Error|WP_REST_Response
      */
-    public function delete_currenty(  $Request ){
+    public function delete_currenty(WP_REST_Request $Request ){
 
+        die('delete');
     }
       /**
      * add category
      * @param WP_REST_Request $request
      * @return WP_Error|WP_REST_Response
      */
-    public function create_currenty( $Request ){
+    public function create_currenty(WP_REST_Request $Request ){
+
         
+        die('succes');
     }
     /**
      * add category
      * @param WP_REST_Request $request
      * @return WP_Error|WP_REST_Response
      */
-    public function update_currenty( $Request ){
+    public function update_currenty(WP_REST_Request $Request ){
 
+        die('put');
+    }
+        /**
+     * add login
+     * @param WP_REST_Request $request
+     * @return WP_Error|WP_REST_Response
+     */
+     public function login(WP_REST_Request $Request ){
+
+        die('login');
+    }
+     /**
+     * add logout
+     * @param WP_REST_Request $request
+     * @return WP_Error|WP_REST_Response
+     */
+     public function logout(WP_REST_Request $Request ){
+
+        die('logout');
     }
 
-    private function privileged_permission_callback( $Request ){
+    public function privileged_permission_callback( $Request ){
+      
         return true;
     }
 
