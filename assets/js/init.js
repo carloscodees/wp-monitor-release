@@ -21,7 +21,7 @@ jQuery("#wpmonitorDasboard li a").click(function(){
     if(id === 'cambios'){
         console.log('estoy en cambios')
         jQuery("#changewpmonitor").removeClass("hidden")
-        
+          
         click.addClass('current');
 
     }else {
