@@ -130,10 +130,15 @@ class Setting {
     {
 
         $this->plugin_dir_path = plugin_dir_path( __FILE__ );
-		$this->plugin_url = dirname( __FILE__ );
+        $this->plugin_url = dirname( __FILE__ );
+        
    
     }
     public function get_plugin_url(){
         return $this->plugin_url;
+    }
+
+    public function get_plugin_dir_url(){
+        return $this->plugin_dir_path;
     }
 }

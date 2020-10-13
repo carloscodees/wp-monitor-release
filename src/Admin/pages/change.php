@@ -1,39 +1,3 @@
-
-
-
-
-<div class="wp-filter" style="display: flex;    justify-content: space-between;  align-items: center;">
-
-
-<ul class="filter-links" id="wpmonitorDasboard">
-        <li class="plugin-install-featured">
-            <a href="#" class="current" id="cambios" >Cambios</a>
-         </li>
-        <li class="plugin-install-popular">
-            <a href="#"  id="registro" >Registro</a>
-         </li>
-        <li class="plugin-install-recommended">
-            <a href="#" id="monedas">Monedas</a> 
-        </li>
-        <li class="plugin-install-favorites">
-            <a href="#" id="setting">Setting</a>
-        </li>
-        <li class="plugin-install-favorites">
-            <a href="#" id="Api">Api</a>
-        </li>
-</ul>
-
-
-
-<button class="button button-primary">
-    Guardar
-</button>
-
-</div>
-
-
-
-<section id="changewpmonitor">
 <button class="button button-primary chageWpmonitor hidden">
         Mostrar
     </button>
@@ -75,8 +39,3 @@
 	</div>
 	</div>
 		</div>
-</section>
-
-<section id="selectregistro" class="hidden" >
-    <h2>Estoy en el registro</h2>
-</section>
